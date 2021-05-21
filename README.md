@@ -1,4 +1,4 @@
-·# Simple PDF merger
+# Simple PDF merger
 > CLI app for merging several pdf files
 
 There many ways to merge pdf's, some of them payed and some of them free online, but you don't know what those online options do with your files. Here is a simple script to merge several pdf's using the CLI.
