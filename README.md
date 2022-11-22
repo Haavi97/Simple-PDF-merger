@@ -11,6 +11,11 @@ Just clone this repository in the folder where you have the files. Or just give 
 python mergepdf.py files_paths --output=file_path
 ```
 
+### Merge several files
+```bash
+python mergepdf.py merge --output=file_path
+```
+
 ## EXAMPLE
 ```bash
 python mergepdf.py document1.pdf document1.pdf --ouput=merged.pdf
@@ -19,3 +24,6 @@ python mergepdf.py document1.pdf document1.pdf --ouput=merged.pdf
 ## CODE
 The core is taken from the [Real Python Tutorial](https://realpython.com/pdf-python/#how-to-merge-pdfs)
 I just added the CLI part
+
+## TODO
+- [ ] Add merge pdf files in current folder
