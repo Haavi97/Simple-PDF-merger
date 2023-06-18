@@ -2,7 +2,7 @@ import os
 import sys
 from sys import argv
 
-from PyPDF2 import PdfFileReader, PdfFileWriter
+from PyPDF2 import PdfReader, PdfWriter
 
 if not sys.warnoptions:
     import warnings
@@ -10,13 +10,13 @@ if not sys.warnoptions:
 
 
 def merge_pdfs(paths, output):
-    pdf_writer = PdfFileWriter()
+    pdf_writer = PdfWriter()
 
     for path in paths:
-        pdf_reader = PdfFileReader(path)
-        for page in range(pdf_reader.getNumPages()):
+        pdf_reader = PdfReader(path)
+        for page in range(len(pdf_reader.pages)):
             # Add each page to the writer object
-            pdf_writer.addPage(pdf_reader.getPage(page))
+            pdf_writer.add_page(pdf_reader.pages[page])
 
     # Write out the merged PDF
     with open(output, 'wb') as out:
